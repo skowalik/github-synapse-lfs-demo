@@ -1,0 +1,17 @@
+{
+	"name": "1 Analyze Using Serverless SQL Pool",
+	"properties": {
+		"content": {
+			"query": "SELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n            BULK '/users/NYCTripSmall.parquet',\n            DATA_SOURCE = 'AIALake',\n            FORMAT='PARQUET'\n    ) AS [result]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "Built-in",
+				"databaseName": "DataExplorationDB"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
