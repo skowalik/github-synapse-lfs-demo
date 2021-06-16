@@ -1,0 +1,17 @@
+{
+	"name": "4 View SQL Data",
+	"properties": {
+		"content": {
+			"query": "SELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://aialake.dfs.core.windows.net/users/NYCTaxi/PassengerCountStats_parquetformat/part-00000-a6090d0f-8375-439d-ade8-de7785605607-c000.snappy.parquet',\n        FORMAT='PARQUET'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "Built-in",
+				"databaseName": "master"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
