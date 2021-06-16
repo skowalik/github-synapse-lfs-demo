@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "Testing-Git-LFS",
 				"type": "SynapseNotebook",
 				"dependsOn": [],
 				"policy": {
